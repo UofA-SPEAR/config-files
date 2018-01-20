@@ -1,5 +1,13 @@
 # Config-Files
-A repo for backing up custom configuration files for the TX2
+A repo for backing up custom configuration files for the TX2.
+
+This works by creating a bare git repo and moving the source tree
+to the root directory of the file system. It is a convenient method
+for backing up specific configuration files which could be difficult
+to reconfigure should anything unexpected happen to our system image.
+
+_Note: A bare git repo is a repo that only has the contents you would normally
+find in the .git directory._
 
 ## Setup
 ```bash
@@ -14,6 +22,7 @@ config-files config status.showUntrackedFiles no
 ```
 
 ## Usage
+Do the following whenever you'd like to add or update a configuration file
 ```bash
 config-files status
 config-files add .bashrc
