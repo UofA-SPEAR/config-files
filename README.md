@@ -1,6 +1,7 @@
 # Config-Files
-A repo for backing up custom configuration files for the TX2.
+A repo for backing up SPEAR software configuration files.
 
+## Description
 This works by creating a bare git repo and moving the source tree
 to the root directory of the file system. It is a convenient method
 for backing up specific configuration files which could be difficult
@@ -28,6 +29,11 @@ config-files status
 config-files add .bashrc
 config-files commit -m 'Add bashrc'
 config-files push
+```
+If you want to save the configuration files of a new system, simply create
+a new branch for that system.
+```bash
+config-files checkout -b system-name
 ```
 
 ## Replication
